@@ -1,0 +1,9 @@
+* {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    padding: 10px;
+    background-color: darkorange;
+    color: white;
+}
