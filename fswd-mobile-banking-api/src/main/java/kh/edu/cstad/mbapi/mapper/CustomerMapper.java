@@ -4,10 +4,7 @@ import kh.edu.cstad.mbapi.domain.Customer;
 import kh.edu.cstad.mbapi.dto.CreateCustomerRequest;
 import kh.edu.cstad.mbapi.dto.CustomerResponse;
 import kh.edu.cstad.mbapi.dto.UpdateCustomerRequest;
-import org.mapstruct.BeanMapping;
-import org.mapstruct.Mapper;
-import org.mapstruct.MappingTarget;
-import org.mapstruct.NullValuePropertyMappingStrategy;
+import org.mapstruct.*;
 
 @Mapper(componentModel = "spring")
 public interface CustomerMapper {
@@ -23,6 +20,7 @@ public interface CustomerMapper {
     // parameter is source data
     CustomerResponse fromCustomer(Customer customer);
 
+    @Mapping(source = "customerSegment", target = "customerSegment.segment")
     Customer toCustomer(CreateCustomerRequest createCustomerRequest);
 
 }

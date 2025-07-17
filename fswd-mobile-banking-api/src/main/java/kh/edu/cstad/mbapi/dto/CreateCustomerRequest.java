@@ -1,6 +1,9 @@
 package kh.edu.cstad.mbapi.dto;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
+
+import java.time.LocalDate;
 
 public record CreateCustomerRequest(
 
@@ -10,8 +13,14 @@ public record CreateCustomerRequest(
         @NotBlank(message = "Gender is required")
         String gender,
 
+        @NotNull(message = "Date of birth is required")
+        LocalDate dob,
+
         String email,
         String phoneNumber,
-        String remark
+        String remark,
+
+        String nationalCardId,
+        String customerSegment
 ) {
 }
