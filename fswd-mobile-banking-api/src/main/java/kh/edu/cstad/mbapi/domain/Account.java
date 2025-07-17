@@ -22,13 +22,16 @@ public class Account {
     private String actNo;
 
     @Column(nullable = false, length = 50)
-    private String actType;
+    private String actName;
 
     @Column(nullable = false, length = 50)
     private String actCurrency;
 
     @Column(nullable = false)
     private BigDecimal balance;
+
+    @Column(nullable = false)
+    private Boolean isHide;
 
     @Column(nullable = false)
     private Boolean isDeleted;

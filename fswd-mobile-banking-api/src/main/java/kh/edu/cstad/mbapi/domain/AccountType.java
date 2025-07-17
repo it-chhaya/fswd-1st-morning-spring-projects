@@ -11,6 +11,7 @@ import java.util.List;
 @Entity
 @Table(name = "account_types")
 public class AccountType {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -19,4 +20,5 @@ public class AccountType {
 
     @OneToMany(mappedBy = "accountType")
     private List<Account> accounts;
+
 }
